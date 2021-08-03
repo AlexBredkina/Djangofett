@@ -1,0 +1,57 @@
+{% extends 'adminapp/base.html' %}
+
+{% block content %}
+                <h1 class="mt-4">Категории</h1>
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-table mr-1"></i>
+            Категории
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>Название</th>
+                        <th>Краткое описание</th>
+                        <th>Активен</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                        <th>Название</th>
+                        <th>Краткое описание</th>
+                        <th>Активен</th>
+                    </tr>
+                    </tfoot>
+                    <tbody>
+                    {% for category in object_list %}
+                        <tr>
+                            <td>
+                                <a href="{% url 'admin_staff:admin_categories_update'  category.id%} "  style="color: dodgerblue">
+                                    {{ category.name }}
+                                </a>
+                            </td>
+                            <td>{{ category.description }}</td>
+                        <td class="text-center">
+                                {% if category.is_active %}
+                                    <i class="fas fa-check-circle"></i>
+                                {% else %}
+                                    <i class="fas fa-times-circle"></i>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-success">
+                <a href="{% url 'admin_staff:admin_categories_create'%}" style="color: white;">
+                    Создать категорию
+                </a>
+            </button>
+        </div>
+    </div>
+{% endblock %}

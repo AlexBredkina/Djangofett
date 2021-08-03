@@ -1,0 +1,13 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IElyYQ==?=
+From: django@geekbrains.local
+To: alex@mail.ru
+Date: Sun, 31 Jan 2021 09:14:41 -0000
+Message-ID: <161208448173.4632.2100702543623654024@DESKTOP-4F5I78P>
+
+Для подтверждения перейдите по ссылке http://localhost:8000/auth/verify/alex@mail.ru/f26dcb8901997116066a631caf13d8cf1ec3d0d2
+-------------------------------------------------------------------------------

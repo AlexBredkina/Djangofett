@@ -12,7 +12,7 @@ def index(request):
     return render(request, 'mainapp/index.html', context)
 
 
-def products(request, page=1, category_id=None,):
+def products(request,category_id=None, page=1,):
     context = {
         'title': 'Товары',
         'products': Product.objects.all(),
